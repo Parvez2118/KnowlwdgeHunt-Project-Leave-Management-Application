@@ -26,6 +26,7 @@ import Home from './Components/Home';
 import HodRegister from './Components/HOD/HodRegister';
 import WardenRegister from './Components/WARDEN/WardenRegister';
 import Login from './Components/STUDENT/Login';
+import ViewAllStudent from './Components/WARDEN/ViewAllStudent';
 
 
 const App = () => {
@@ -41,7 +42,9 @@ const App = () => {
         <Route path='/Hodregister' element={<HodRegister/>}></Route> 
         <Route path='/wardenregister' element={<WardenRegister/>}></Route> 
         <Route path='/Login' element={<Login/>}></Route> 
-        {/* <Route exact path='/viewallstudent' element={<ViewAllStudent/>}></Route>
+        <Route exact path='/viewallstudent' element={<ViewAllStudent/>}></Route>
+
+        {/*
         <Route exact path='/viewworkingrequest' element={<Workingrequest/>}></Route>
         <Route exact path='/viewallstudenthod' element={<HodviewAllStudent/>}></Route>
        

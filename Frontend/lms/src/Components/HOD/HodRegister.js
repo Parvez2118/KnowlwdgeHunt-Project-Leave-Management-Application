@@ -96,7 +96,7 @@ function HodRegister(){
     const PostData= async (e) => {
         e.preventDefault();
         
-        const res = await fetch("/LoginHod", {
+        const res = await fetch("http://localhost:8000/LoginHod", {
             method:"POST",
             headers: {
                 "Content-Type" : "application/json"

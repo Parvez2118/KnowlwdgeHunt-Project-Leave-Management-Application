@@ -101,7 +101,7 @@ function WardenRegister(){
     const PostData= async (e) => {
         e.preventDefault();
         
-        const res = await fetch("/Loginwarden", {
+        const res = await fetch("http://localhost:8000/Loginwarden", {
             method:"POST",
             headers: {
                 "Content-Type" : "application/json"

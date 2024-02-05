@@ -13,7 +13,7 @@ function Login(){
     const PostData= async (e) => {
         e.preventDefault();
         
-        const res = await fetch("/Login", {
+        const res = await fetch("http://localhost:8000/Login", {
             method:"POST",
             headers: {
                 "Content-Type" : "application/json"
