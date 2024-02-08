@@ -59,7 +59,7 @@ studentSchema.methods.generateAuthToken= async function(){
         const token= jwt.sign({_id:this._id},"MYNAMEISLEAVEMANAGEMENTSYSTEMAPPLICATIONAUTHENTICATION");
         this.tokens=this.tokens.concat({token:token});
         await this.save();
-        console.log(token);
+        // console.log(token);
         return token;
     }
     catch(err){

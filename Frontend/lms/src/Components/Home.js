@@ -9,7 +9,8 @@ function Home(){
         <center>
   <div class="card" style={{backgroundColor:" rgb(222, 238, 252)"}}>
   <div class="card-body">
-   <h1 style={{color:"#0E2431"}}>Leave Management System</h1> 
+<img height="60px" style={{borderRadius:"50px"}}src="logo2.png"></img>
+   <h1 style={{color:"#296B7B"}}>Leave Management System</h1> 
   </div>
 </div>
 </center>

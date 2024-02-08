@@ -120,7 +120,7 @@ function WardenRegister(){
         }
         else
         {
-            window.alert("Logged  from ui in");
+          window.alert("Logged In Sucessfully");
               navigate("/viewallstudent");
         }
     }
@@ -138,7 +138,7 @@ function WardenRegister(){
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
         <form method='POST'>
 <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+            <p class="lead fw-normal mt-4 me-3" style={{margin:0}}>Sign in with</p>
             <button type="button" class="btn btn-light btn-floating mx-1">
               <i class="fab fa-facebook-f"></i>
             </button>
@@ -180,10 +180,6 @@ function WardenRegister(){
   </div>
   <div
     class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-light  ">
-<div class="text-muted mb-3 mb-md-0">
-      Copyright © 2020. All rights reserved.
-    </div>
-   
     <div>
       <a href="#!" class="text-white me-4">
         <i class="fab fa-facebook-f"></i>

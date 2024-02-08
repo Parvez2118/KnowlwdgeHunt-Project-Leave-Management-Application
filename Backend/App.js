@@ -14,7 +14,11 @@ const cookieParser = require('cookie-parser')
 const cors=require('cors');
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:3000', 
+    credentials: true, 
+  };
+app.use(cors(corsOptions));
 
 const hl= require('../Backend/Models/StudentUserModel');
 const wl = require('../Backend/Models/StudentUserworkingModel');
@@ -139,9 +143,12 @@ app.get('/abcadmins', (req,res)=>{
     
   });
 app.get('/ab',authenticate, async(req,res)=>{
+    console.log("abbbbbbbbbbbbbbbbbbbb");
     res.send(req.rootUser);
 })
+
 app.get("/abc",authenticate,async (req,res)=>{
+    console.log("Studennttttttttttttttttt");
     try{
         const alluser = await hl.find({});
         res.send({status:"OK", data:alluser});
@@ -175,6 +182,8 @@ let token;
          {
             const isMatch= await bcrypt.compare(password ,userLogin.password);
             token= await userLogin.generateAuthToken();
+            console.log("Insideee loginnnn ");
+            // console.log(token);
             res.cookie("jwttoken" ,token ,{
                 expires :new Date(Date.now() +25892000000),
                 httpOnly:true
@@ -395,7 +404,17 @@ app.get('/:id', (req,res)=>{
 
         res.send(req.rootUser);
     });
-
+    app.get("/wcount/:id" ,async(req,res)=>{
+        const w= await hl.find({"Studentid":req.params.id}).and([{wardenstatus:"approved"},
+        {hodstatus:"approved"}]).countDocuments();
+        res.status(201).json(w);
+      });
+    
+      // count holiday leave for particular student
+      app.get("/hcount/:id" ,async(req,res)=>{
+        const w= await wl.find({"Studentid":req.params.id}).and([{wardenstatus:"approved"}]).countDocuments();
+        res.status(201).json(w);
+      });
   
     app.listen(8000);
          

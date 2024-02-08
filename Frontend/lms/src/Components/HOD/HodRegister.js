@@ -115,8 +115,8 @@ function HodRegister(){
         }
         else
         {
-            window.alert("Logged  from ui in");
-              navigate("/Hod");
+          window.alert("Logged In Sucessfully");
+          navigate("/Hod");
         }
     }
     return(
@@ -133,7 +133,7 @@ function HodRegister(){
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
         <form method='POST'>
 <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+            <p class="lead fw-normal mt-4 me-3"style={{margin:"0px"}}>Sign in with</p>
             <button type="button" class="btn btn-light btn-floating mx-1">
               <i class="fab fa-facebook-f"></i>
             </button>
@@ -148,7 +148,7 @@ function HodRegister(){
 
           <div class="divider d-flex align-items-center my-4">
             <p class="text-center fw-bold mx-3 mb-0">Or</p>
-          </div>
+</div>
 <div class="form-group">  
                     <label for="exampleInputEmail1" class="para"> Enter Email address </label>  
                     <input type="email" class="form-control form-control-sm hi"  id="exampleInputEmail1" autoComplete="off" aria-describedby="emailHelp" value={email} onChange={(e)=>Setemail(e.target.value)} required name="email" />  

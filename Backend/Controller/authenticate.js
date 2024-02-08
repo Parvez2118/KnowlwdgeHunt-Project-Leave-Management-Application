@@ -3,10 +3,11 @@ const Student=require('../Models/Student');
 
 
 const Authenticate =async (req,res,next) =>{
+    console.log(req.cookies.jwttoken);
     try{
 
         const token = req.cookies.jwttoken;
-        console.log(token);
+        console.log(token+"insidee authenticatee");
         const verifyToken=jwt.verify(token ,"MYNAMEISLEAVEMANAGEMENTSYSTEMAPPLICATIONAUTHENTICATION");
 
         const rootUser= await Student.findOne({_id:verifyToken._id, "tokens.token":token});
