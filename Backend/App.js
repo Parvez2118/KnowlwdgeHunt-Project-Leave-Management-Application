@@ -144,12 +144,12 @@ app.get('/abcadmins', (req,res)=>{
     })
     
   });
-app.get('/ab',authenticate, async(req,res)=>{
+app.get('/ab', async(req,res)=>{
     console.log("abbbbbbbbbbbbbbbbbbbb");
     res.send(req.rootUser);
 })
 
-app.get("/abc",authenticate,async (req,res)=>{
+app.get("/abc",async (req,res)=>{
     console.log("Studennttttttttttttttttt");
     try{
         const alluser = await hl.find({});
@@ -202,7 +202,7 @@ let token;
             else
             {
               console.log("Logged in");
-              return res.json({message:"Logged in"});
+              return res.json({message:"Logged in",token:await userLogin.generateAuthToken()});
             }
            
          }
