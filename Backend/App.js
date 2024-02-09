@@ -2,7 +2,9 @@ const mongoose=require('mongoose');
 const express = require('express') ;
 const app=express();
 const jwt= require("jsonwebtoken");
-const DB='mongodb+srv://redskull:redskull2118@cluster0.ti3awfp.mongodb.net/NewProject?retryWrites=true&w=majority'; mongoose.connect(DB,{ useNewUrlParser:true, useUnifiedTopology:true }).then(()=>{ console.log(`Connected to DB`); }).catch((err)=>{ console.log(err); })
+const DB='mongodb+srv://redskull:redskull2118@cluster0.ti3awfp.mongodb.net/NewProject?retryWrites=true&w=majority';
+ mongoose.connect(DB,{ useNewUrlParser:true }).then(()=>{ console.log(`Connected to DB`); }).
+ catch((err)=>{ console.log(err); })
 const Student=require('../Backend/Models/Student');
 const User1=require('../Backend/Models//StudentUserModel');
 const working=require('../Backend/Models/StudentUserworkingModel');
@@ -186,7 +188,9 @@ let token;
             // console.log(token);
             res.cookie("jwttoken" ,token ,{
                 expires :new Date(Date.now() +25892000000),
-                httpOnly:true
+                httpOnly:true,
+                secure: true, 
+                sameSite: 'Strict'
             });
 
             if(!isMatch)
@@ -196,7 +200,7 @@ let token;
             }
             else
             {
-                console.log("Logged in");
+              console.log("Logged in");
               return res.json({message:"Logged in"});
             }
            
