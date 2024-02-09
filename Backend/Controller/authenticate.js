@@ -6,18 +6,21 @@ const Authenticate =async (req,res,next) =>{
     console.log(req.cookies.jwttoken);
     try{
 
-        const token = req.cookies.jwttoken;
-        console.log(token+"insidee authenticatee");
-        const verifyToken=jwt.verify(token ,"MYNAMEISLEAVEMANAGEMENTSYSTEMAPPLICATIONAUTHENTICATION");
+        // const token = req.cookies.jwttoken;
+        const token=req.header("Authorization");
+        const jwttoken =token.replace("Bearer","").trim();
 
-        const rootUser= await Student.findOne({_id:verifyToken._id, "tokens.token":token});
+        console.log(token+"insidee authenticatee");
+        const verifyToken=jwt.verify(jwttoken ,"MYNAMEISLEAVEMANAGEMENTSYSTEMAPPLICATIONAUTHENTICATION");
+
+        const rootUser= await Student.findOne({_id:verifyToken._id, "tokens.token":jwttoken});
 
         if(!rootUser)
         {
             throw new Error("User Not found");
         }
 
-        req.token=token;
+        req.token=jwttoken;
         req.rootUser=rootUser;
         console.log(req.rootUser);
         req.userID=rootUser._id;
