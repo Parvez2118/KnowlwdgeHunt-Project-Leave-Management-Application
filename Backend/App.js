@@ -190,7 +190,8 @@ let token;
                 expires :new Date(Date.now() +25892000000),
                 httpOnly:true,
                 secure: true, 
-                sameSite: 'Strict'
+                sameSite: 'Strict',
+                domain: 'https://rococo-pudding-77e95e.netlify.app'
             });
 
             if(!isMatch)
