@@ -137,7 +137,7 @@ app.get('/abcadmins', (req,res)=>{
 
   //// Hod Reuests
   app.get('/abcadmin', (req,res)=>{
-    
+
     User1.find({}).then((items)=>{
         res.json(items);
     }).catch((err)=>{
@@ -145,12 +145,12 @@ app.get('/abcadmins', (req,res)=>{
     })
     
   });
-app.get('/ab', async(req,res)=>{
+app.get('/ab',authenticate, async(req,res)=>{
     console.log("abbbbbbbbbbbbbbbbbbbb");
     res.send(req.rootUser);
 })
 
-app.get("/abc",async (req,res)=>{
+app.get("/abc",authenticate,async (req,res)=>{
     console.log("Studennttttttttttttttttt");
     try{
         const alluser = await hl.find({});
