@@ -5,7 +5,7 @@ function ViewWorkingRequest(){
   
     async function login(){
   
-      const response = await fetch('http://localhost:8000/abcadmin', {
+      const response = await fetch('https://lms-server-sm9p.onrender.com/abcadmin', {
         method:'GET',
         headers:{
           'Content-Type':'application/json'

@@ -9,15 +9,17 @@ import '../../App.css';
 function StudentHome(){
   
   const [data,setData]= useState({});
+  const token=localStorage.getItem("token");
   let navigate=useNavigate();
   const callAboutPage= async ()=>{
       try{
 
-          const res= await fetch('http://localhost:8000/ab' ,{
+          const res= await fetch('https://lms-server-sm9p.onrender.com/ab' ,{
               method:"GET",
               headers:{
                   Accept:"application/json",
-                  "Content-Type":"application/json"
+                "Content-Type":"application/json",
+                Authorization:`Bearer ${token}`
               },
               credentials:"include"
 });
@@ -37,10 +39,11 @@ catch(err){
   const [users, setUsers] = useState([]);
 
  async function login(){
-const response = await fetch('http://localhost:8000/abc', {
+const response = await fetch('https://lms-server-sm9p.onrender.com/abc', {
       method:'GET',
       headers:{
-        'Content-Type':'application/json'
+        'Content-Type':'application/json',
+        Authorization:`Bearer ${token}`
       },
       credentials:"include"
     });

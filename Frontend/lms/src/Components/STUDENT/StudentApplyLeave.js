@@ -28,7 +28,7 @@ function StudentApplyLeave()
         e.preventDefault();
         
         const {studentname, startdate, enddate, purpose,Studentid, wardenstatus,hodstatus} =userRegistration;
-        const res1 = await fetch("/holidayleave", {
+        const res1 = await fetch("https://lms-server-sm9p.onrender.com/holidayleave", {
             method:"POST",
             headers: {
                 "Content-Type" : "application/json"
@@ -52,7 +52,7 @@ function StudentApplyLeave()
         }
         else
         {
-            window.alert("valid Reg");
+            window.alert("Leave Applied successfully");
             //  history.push("/login");
             navigate("/studenthome");
         }

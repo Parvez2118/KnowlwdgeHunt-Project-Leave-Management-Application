@@ -28,7 +28,7 @@ function StudentApplyWDLeave()
         e.preventDefault();
         
         const {studentname, startdate, enddate, purpose, Studentid,wardenstatus,hodstatus} =userRegistration;
-        const res1 = await fetch("/workingdayleave", {
+        const res1 = await fetch("https://lms-server-sm9p.onrender.com/workingdayleave", {
             method:"POST",
             headers: {
                 "Content-Type" : "application/json"
@@ -52,7 +52,7 @@ function StudentApplyWDLeave()
         }
         else
         {
-            window.alert("valid Reg");
+            window.alert("Leave Applied successfully");
             //  history.push("/login");
             navigate("/studenthome");
         }

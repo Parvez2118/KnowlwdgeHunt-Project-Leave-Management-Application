@@ -6,7 +6,7 @@ const [users, setUsers] = useState([]);
   
     async function login(){
   
-      const response = await fetch('http://localhost:8000/abcadmins', {
+      const response = await fetch('https://lms-server-sm9p.onrender.com/abcadmins', {
         method:'GET',
         headers:{
           'Content-Type':'application/json'

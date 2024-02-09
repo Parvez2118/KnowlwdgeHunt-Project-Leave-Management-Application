@@ -19,7 +19,7 @@ function UpdateHodrequest(){
    
     const loaduserdata= async ()=>{
         try{
-           const userdata= await axios.get(`${"http://localhost:3000"}/${id}`);
+           const userdata= await axios.get(`${"https://lms-server-sm9p.onrender.com"}/${id}`);
            setuser(userdata.data);
            console.log(user);
          }
@@ -31,7 +31,7 @@ function UpdateHodrequest(){
      const updateuserdata= (e)=>{
         try{
              e.preventDefault();
-             axios.post(`${"http://localhost:3000"}/user/${id}`,user).then(res=>{
+             axios.post(`${"https://lms-server-sm9p.onrender.com"}/user/${id}`,user).then(res=>{
                 navigate("/Hod");
              }); 
           

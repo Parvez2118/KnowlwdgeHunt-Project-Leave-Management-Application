@@ -101,7 +101,7 @@ function WardenRegister(){
     const PostData= async (e) => {
         e.preventDefault();
         
-        const res = await fetch("http://localhost:8000/Loginwarden", {
+        const res = await fetch("https://lms-server-sm9p.onrender.com/Loginwarden", {
             method:"POST",
             headers: {
                 "Content-Type" : "application/json"

@@ -24,7 +24,7 @@ function Addstudent(){
     e.preventDefault();
     
     const { username,email,MobileNumber,Department,Parentscontact,studentid,password} =userRegistration;
-    const res1 = await fetch("/addstudent", {
+    const res1 = await fetch("https://lms-server-sm9p.onrender.com/addstudent", {
         method:"POST",
         headers: {
             "Content-Type" : "application/json"

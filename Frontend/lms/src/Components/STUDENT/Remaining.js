@@ -8,12 +8,12 @@ function Remaining(){
  
   async function login(){
 
-    const response = await fetch(`${"http://localhost:3000/wcount"}/${id}`, {
+    const response = await fetch(`${"https://lms-server-sm9p.onrender.com/wcount"}/${id}`, {
       method:'GET',
       headers:{
         'Content-Type':'application/json'
-      }
-     
+      },
+      credentials:"include"
     });
     const data = await response.json();
     setUsers(data);
@@ -24,12 +24,12 @@ function Remaining(){
 
   async function login1(){
 
-    const response = await fetch(`${"http://localhost:3000/hcount"}/${id}`, {
+    const response = await fetch(`${"https://lms-server-sm9p.onrender.com/hcount"}/${id}`, {
       method:'GET',
       headers:{
         'Content-Type':'application/json'
-      }
-     
+      },
+      credentials:"include"
     });
     const data = await response.json();
     setUsers1(data);

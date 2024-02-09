@@ -13,7 +13,7 @@ function Login(){
     const PostData= async (e) => {
         e.preventDefault();
         
-        const res = await fetch("http://localhost:8000/Login", {
+        const res = await fetch("https://lms-server-sm9p.onrender.com/Login", {
             method:"POST",
             headers: {
                 "Content-Type" : "application/json"
@@ -33,6 +33,7 @@ function Login(){
         }
         else
         {
+          localStorage.setItem("token",data.token);
               window.alert("Logged In Sucessfully");
               navigate("/studenthome");
         }
