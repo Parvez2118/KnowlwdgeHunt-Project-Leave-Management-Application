@@ -15,7 +15,7 @@ const cors=require('cors');
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
-    origin: 'https://classy-cendol-18cf2c.netlify.app', 
+    origin: 'https://rococo-pudding-77e95e.netlify.app', 
     credentials: true, 
   };
 app.use(cors(corsOptions));
