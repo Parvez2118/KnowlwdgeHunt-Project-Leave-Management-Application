@@ -137,6 +137,7 @@ app.get('/abcadmins', (req,res)=>{
 
   //// Hod Reuests
   app.get('/abcadmin', (req,res)=>{
+    
     User1.find({}).then((items)=>{
         res.json(items);
     }).catch((err)=>{
