@@ -19,18 +19,28 @@ Holiday Leave
 Functionality:
 
 Students can request leaves.
+
 HOD and Warden can view all leave requests.
+
 HOD and Warden can approve or reject leave requests.
+
 Warden can add new students.
+
 Students can manage their leaves, view remaining leaves, and track leave request statuses.
+
 Implemented Authencation and Authorisation 
+
 Data is stored in the mongoDB database
 
 Project Setup Instructions
 1.Clone the Repository
+
 2.Install Dependencies: In Frontend npm install and in Backend npm install
+
 3.Run the Application: In frontend npm start and in Backend node App.js
+
 4.Access the application in your browser:https://rococo-pudding-77e95e.netlify.app/
+
 
 Login Details:
 
