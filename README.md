@@ -3,6 +3,7 @@
 Leave Management System - MERN Stack Project
 
 **Overview**
+
 This project is a MERN (MongoDB, Express.js, React.js, Node.js) stack implementation of a Leave Management System. It includes three main components: HOD (Head of Department), Warden, and Student. The system allows students to request different types of leaves, and the holiday requests need approval from the warden and working day leave request need approval from both hod and Warden. HOD and Warden can manage student details, view all leave requests, and update their status.
 
 **Features**
@@ -16,6 +17,7 @@ Warden
 Student
 
 **Leave Types:**
+
 Working Day Leave
 
 Holiday Leave
