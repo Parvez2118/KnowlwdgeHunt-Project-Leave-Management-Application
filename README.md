@@ -2,21 +2,25 @@
 
 Leave Management System - MERN Stack Project
 
-Overview
+**Overview**
 This project is a MERN (MongoDB, Express.js, React.js, Node.js) stack implementation of a Leave Management System. It includes three main components: HOD (Head of Department), Warden, and Student. The system allows students to request different types of leaves, and the holiday requests need approval from the warden and working day leave request need approval from both hod and Warden. HOD and Warden can manage student details, view all leave requests, and update their status.
 
-Features
+**Features**
 
-User Roles:
+***User Roles:***
+
 HOD (Head of Department)
+
 Warden
+
 Student
 
-Leave Types:
+**Leave Types:**
 Working Day Leave
+
 Holiday Leave
 
-Functionality:
+**Functionality:**
 
 Students can request leaves.
 
@@ -32,7 +36,8 @@ Implemented Authencation and Authorisation
 
 Data is stored in the mongoDB database
 
-Project Setup Instructions
+**Project Setup Instructions**
+
 1.Clone the Repository
 
 2.Install Dependencies: In Frontend npm install and in Backend npm install
@@ -42,18 +47,24 @@ Project Setup Instructions
 4.Access the application in your browser:https://rococo-pudding-77e95e.netlify.app/
 
 
-Login Details:
+**Login Details:**
 
-HOD:
+**HOD:**
+
 Username: hod@gmail.com
+
 Password: 12345
 
-Warden:
+**Warden:**
+
 Username: warden@gmail.com
+
 Password: 12345
 
-Student:
+**Student:**
+
 Username: final@gmail.com
+
 Password: 1234
 
 Username: nakul@gmail.com
