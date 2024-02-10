@@ -41,7 +41,7 @@ Password: 12345
 
 Warden:
 Username: warden@gmail.com
-Password: wardenpassword
+Password: 12345
 
 
 Student:
