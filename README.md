@@ -27,11 +27,10 @@ Implemented Authencation and Authorisation
 Data is stored in the mongoDB database
 
 Project Setup Instructions
-1.Clone the Repository:
+1.Clone the Repository
 2.Install Dependencies: In Frontend npm install and in Backend npm install
 3.Run the Application: In frontend npm start and in Backend node App.js
 4.Access the application in your browser:https://rococo-pudding-77e95e.netlify.app/
-
 
 Login Details:
 
@@ -42,7 +41,6 @@ Password: 12345
 Warden:
 Username: warden@gmail.com
 Password: 12345
-
 
 Student:
 Username: final@gmail.com
